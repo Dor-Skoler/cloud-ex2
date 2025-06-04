@@ -20,7 +20,6 @@ def main():
 
     # Get public IP address
     my_ip = urllib.request.urlopen('http://checkip.amazonaws.com/').read().decode('utf-8').strip()
-
     # Authorize inbound traffic to security group from my IP address only
     ec2.authorize_security_group_ingress(
         GroupId=security_group['GroupId'],
